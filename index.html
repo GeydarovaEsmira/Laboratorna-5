@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.8/aframe/build/aframe-ar.js"></script>
+    <body style="margin: 0px; overflow: hidden;">
+        <a-scene webx="requiredFeatures: hit-test, local-floor;
+        optionalFeatures: dom-overlay, unbounded;
+        overlayElement:#overlay;">
+            <a-marker preset="hiro">
+                <a-box position="0 0.5 0" scale="0.2 0.2 0.2" material="color: blue"></a-box>
+                <a-torus position="-0.3 0.3 0" color="#8CCC14" radius="0.07" radius-tubular="0.07"
+                animation="property: rotation; to: 360 360 360; loop: true; dur:7000"></a-torus>
+                <a-icosahedron color="#FF926B" radius="0.2" position="0.3 0.3 0"
+                animation="property: rotation; to: 0 360 0; loop: true; dur:7000"></a-icosahedron>
+            </a-marker>
+
+            <a-marker preset="kanji">
+                <a-box position="0 0.5 0" scale="0.2 0.2 0.2" material="color: blue"></a-box>
+                <a-torus-knot position="0.3 0.3 0" color="#CC1427" radius="0.07" radius-tubular="0.04"
+                animation="property: rotation; to: 360 360 360; loop: true; dur:7000"></a-torus-knot>
+                <a-octahedron color="#FF926B" radius="0.2" position="-0.3 0.3 0"
+                animation="property: rotation; to: 0 360 0; loop: true; dur:7000"></a-octahedron>
+            </a-marker>
+
+            
+            <a-marker type='pattern' url='https://raw.githubusercontent.com/GeydarovaEsmira/markers/main/pattern-G.patt'>
+                <a-sphere color="yellow" radius="1"></a-sphere>
+                <a-sphere color="black" radius="0.2" position="-0.3 0.8 -0.3"></a-sphere>
+                <a-sphere color="black" radius="0.2" position="0.3 0.8 -0.3"></a-sphere>
+                <a-torus color="#CC5514" radius="0.3" radius-tubular="0.15" position="0 0.5 0"></a-torus>
+            </a-marker>
+
+
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
